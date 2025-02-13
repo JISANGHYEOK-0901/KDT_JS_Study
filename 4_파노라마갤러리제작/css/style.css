@@ -1,0 +1,210 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+/* ======== css 리셋 시작======== */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  outline: 0;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+}
+
+/* ======== css 리셋 종료 ======== */
+
+/* ======== 공통 UI  시작========*/
+body {
+  font: 17px/1.4 "orbiron";
+  letter-spacing: 1px; /* 자간 */
+  color: #ddd;
+  background: #000;
+}
+
+/* 부모, 비디오 영역 모두 레이아웃 꽉 채우게 해주기 */
+.wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* 부모영역인 wrap 안에서의 자식인 video 설정 */
+.wrap > video {
+  width: 100%; /* vw, hw는 뷰포트(브라우저 창) 너비에 의존 %는 부모 요소의 너비에 의존 */
+  height: 100%;
+  object-fit: cover;
+  position: fixed; /* relative와 달리 화면 레이아웃으로부터 자유롭다 */
+  opacity: 0.5; /* 비디오를 반투명하게 함으로써 검정색 배경화면과 외 요소들을 끌어오림 */
+}
+
+@keyframes panorama-spin {
+  /* transform 효과를 통해 스핀(rotate)을 적용 */
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.wrap #circle {
+  /* article이 .face$임 */
+  width: 600px;
+  height: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -300px;
+  margin-top: -400px;
+
+  transform-style: preserve-3d; /* 3d 변형에 대해서 속성 적용 가능해짐 */
+  /* animation: panorama-spin linear 10s infinite; */
+}
+
+.wrap #circle article {
+  width: 100%;
+  height: 100%;
+  position: absolute; /* body, main, circle 중에 기준점(relative) 필요*/
+  top: 0;
+  left: 0;
+}
+
+.wrap #circle article h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  opacity: 0;
+  transition: all 500ms;
+}
+
+.wrap #circle article:hover h1 {
+  top: -60px;
+  opacity: 1;
+}
+
+.wrap #circle article .inner {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap #circle article .inner > div,
+.inner > nav > div {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 50px;
+  position: relative;
+  opacity: 0.7;
+  overflow: hidden;
+  transition: all 500ms;
+}
+
+.wrap #circle article .inner > div:hover,
+.inner > nav > div:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.wrap #circle article .inner > div:hover i,
+.inner > nav > div:hover i {
+  color: lightblue;
+  text-shadow: 0 0 10px aqua;
+  transform: scale(1.15);
+}
+
+.wrap #circle article .inner > div:hover h2,
+.inner > nav > div:hover h2 {
+  color: lightblue;
+  text-shadow: 0 0 10px white;
+}
+
+/* ======== 공통 UI 종료 ========*/
+
+/* ======== face 요소 개별 제어 시작 ======== */
+.face1 {
+  /* 사이트 네비게이션 */
+  display: none;
+}
+.face2 {
+  display: none;
+}
+.face3 {
+  display: none;
+}
+.face4 {
+  display: none;
+}
+.face5 {
+  display: none;
+}
+.face6 {
+  display: none;
+}
+.face7 {
+  display: none;
+}
+.face8 {
+  /* weather */
+}
+/* ======== face 요소 개별 제어 종료 ======== */
+
+/* ======== .face$ 내부요소 제어 시작 =========*/
+/* ======== .face1 내부요소 제어 시작 =========*/
+/* inner, nav, div, p, i, h2 */
+.face1 .inner > nav > div {
+  width: 290px;
+  height: 254px; /* 픽셀 조정 필요 */
+  float: left; /* 요소가 흐르듯이 설정 */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.face1 .inner > nav div p i {
+  font-size: 100px;
+  transition: all 500ms;
+  opacity: 0.7;
+}
+
+.face1 .inner > nav div p h2 {
+  margin-top: 20px;
+  letter-spacing: 2px;
+  transition: all 500ms;
+}
+
+.face1 .inner > nav div:nth-of-type(odd) {
+  margin-right: 20px;
+}
+
+/* ======== .face2 내부요소 제어 시작 =========*/
+
+/* ======== .face3 내부요소 제어 시작 =========*/
+
+/* ======== .face4 내부요소 제어 시작 =========*/
+
+/* ======== .face5 내부요소 제어 시작 =========*/
+
+/* ======== .face6 내부요소 제어 시작 =========*/
+
+/* ======== .face7 내부요소 제어 시작 =========*/
+
+/* ======== .face8 내부요소 제어 시작 =========*/
+.face8 .inner > div:nth-of-type(1) {
+}
+.face8 .inner > div:nth-of-type(2) {
+}
+.face8 .inner > div:nth-of-type(3) {
+}
+/* ======== .face$ 내부요소 제어 종료 =========*/
