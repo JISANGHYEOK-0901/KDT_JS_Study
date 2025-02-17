@@ -1,0 +1,202 @@
+#zelda_link {
+    position: absolute;
+    width: 60px;
+    height: 65px;
+    background: url("../img/front_stand.png") no-repeat center center;
+    background-size: contain;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.container-xxl {
+    /*  위치 기준점을 잡아 줌  */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*  타운맵을 가운데 정렬  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.town-map {
+    background-image: url('../img/town_map.png');
+    background-size: cover;
+    background-repeat: repeat;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transition: all 200ms linear;
+}
+
+@keyframes forward-moving-up {
+    0% {
+        background-image: url('../img/back_stand.png'); /* 정지 이미지 */
+    }
+    10% {
+        background-image: url('../img/back_walk0.png');
+    }
+    20% {
+        background-image: url('../img/back_walk1.png');
+    }
+    30% {
+        background-image: url('../img/back_walk2.png');
+    }
+    40% {
+        background-image: url('../img/back_walk3.png');
+    }
+    50% {
+        background-image: url('../img/back_walk4.png');
+    }
+    60% {
+        background-image: url('../img/back_walk5.png');
+    }
+    70% {
+        background-image: url('../img/back_walk6.png');
+    }
+    80% {
+        background-image: url('../img/back_walk7.png');
+    }
+    90% {
+        background-image: url('../img/back_walk8.png');
+    }
+    100% {
+        background-image: url('../img/back_walk9.png');
+    }
+}
+
+@keyframes forward-moving-down {
+    0% {
+        background-image: url('../img/front_stand.png'); /* 정지 이미지 */
+    }
+    10% {
+        background-image: url('../img/front_walk0.png');
+    }
+    20% {
+        background-image: url('../img/front_walk1.png');
+    }
+    30% {
+        background-image: url('../img/front_walk2.png');
+    }
+    40% {
+        background-image: url('../img/front_walk3.png');
+    }
+    50% {
+        background-image: url('../img/front_walk4.png');
+    }
+    60% {
+        background-image: url('../img/front_walk5.png');
+    }
+    70% {
+        background-image: url('../img/front_walk6.png');
+    }
+    80% {
+        background-image: url('../img/front_walk7.png');
+    }
+    90% {
+        background-image: url('../img/front_walk8.png');
+    }
+    100% {
+        background-image: url('../img/front_walk9.png');
+    }
+}
+
+@keyframes forward-moving-left {
+    0% {
+        background-image: url('../img/left_stand.png'); /* 정지 이미지 */
+    }
+    10% {
+        background-image: url('../img/left_walk0.png');
+    }
+    20% {
+        background-image: url('../img/left_walk1.png');
+    }
+    30% {
+        background-image: url('../img/left_walk2.png');
+    }
+    40% {
+        background-image: url('../img/left_walk3.png');
+    }
+    50% {
+        background-image: url('../img/left_walk4.png');
+    }
+    60% {
+        background-image: url('../img/left_walk5.png');
+    }
+    70% {
+        background-image: url('../img/left_walk6.png');
+    }
+    80% {
+        background-image: url('../img/left_walk7.png');
+    }
+    90% {
+        background-image: url('../img/left_walk8.png');
+    }
+    100% {
+        background-image: url('../img/left_walk9.png');
+    }
+}
+
+@keyframes forward-moving-right {
+    0% {
+        background-image: url('../img/right_stand.png'); /* 정지 이미지 */
+    }
+    10% {
+        background-image: url('../img/right_walk0.png');
+    }
+    20% {
+        background-image: url('../img/right_walk1.png');
+    }
+    30% {
+        background-image: url('../img/right_walk2.png');
+    }
+    40% {
+        background-image: url('../img/right_walk3.png');
+    }
+    50% {
+        background-image: url('../img/right_walk4.png');
+    }
+    60% {
+        background-image: url('../img/right_walk5.png');
+    }
+    70% {
+        background-image: url('../img/right_walk6.png');
+    }
+    80% {
+        background-image: url('../img/right_walk7.png');
+    }
+    90% {
+        background-image: url('../img/right_walk8.png');
+    }
+    100% {
+        background-image: url('../img/right_walk9.png');
+    }
+}
+
+/*.play-moving{*/
+/*    animation: forward-moving 500ms linear infinite 0s;*/
+/*    animation-play-state: running;*/
+/*}*/
+    .pause-moving{
+        animation-play-state: paused;
+    }
+.play-moving-right {
+    animation: forward-moving-right 700ms linear infinite 0s;
+}
+
+.play-moving-left {
+    animation: forward-moving-left 700ms linear infinite 0s;
+}
+
+.play-moving-up {
+    animation: forward-moving-up 700ms linear infinite 0s;
+}
+
+.play-moving-down {
+    animation: forward-moving-down 700ms linear infinite 0s;
+}
